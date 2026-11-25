@@ -5,6 +5,9 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ## [Unreleased]
 
+### Changed
+- Frontend: replaced every `any` with typed backend DTOs (`BackendClaim`, `BackendDocument`), MUI `SelectChangeEvent` and React `ElementType`; `no-explicit-any` is enforced again.
+
 ## [1.0.0] - 2026-11-25
 
 ### Added

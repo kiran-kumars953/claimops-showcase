@@ -107,7 +107,7 @@ axiosInstance.interceptors.response.use(
   }
 );
 
-function decodeJwtPayload(token: string): any | null {
+function decodeJwtPayload(token: string): Record<string, unknown> | null {
   try {
     const parts = token.split('.');
     if (parts.length < 2) return null;
@@ -121,7 +121,42 @@ function decodeJwtPayload(token: string): any | null {
   }
 }
 
-function mapBackendToFrontendClaim(backend: any): Claim {
+/** Shape of a claim as returned by the Spring Boot API (before mapping to the UI model). */
+interface BackendDocument {
+  id: number;
+  type: string;
+  filename: string;
+  previewUrl: string;
+}
+
+interface BackendClaim {
+  id: number;
+  claimId: string;
+  submissionId: string;
+  policyNumber?: string;
+  patientName?: string;
+  carrierName?: string;
+  policyName?: string;
+  createdAt: string;
+  updatedAt: string;
+  status: string;
+  rejectionReason?: string;
+  manualReviewReason?: string;
+  tpaRecommendationReason?: string;
+  tpaRecommendationStatus?: string;
+  extractionConfidence?: number | string | null;
+  extractedData?: Record<string, unknown> & { customer_name?: string };
+  triggeredRules?: string[];
+  rulesExecutedCount?: number;
+  rulesFailedCount?: number;
+  carrierReferenceId?: string;
+  carrierDecision?: string;
+  carrierDecisionDate?: string;
+  carrierDecisionReason?: string;
+  documents?: BackendDocument[];
+}
+
+function mapBackendToFrontendClaim(backend: BackendClaim): Claim {
   const statusMap: Record<string, Claim['status']> = {
     'APPROVED': 'TPA Approved',
     'TPA_APPROVED': 'TPA Approved',
@@ -160,7 +195,7 @@ function mapBackendToFrontendClaim(backend: any): Claim {
     carrierDecision: backend.carrierDecision || undefined,
     carrierDecisionDate: backend.carrierDecisionDate || undefined,
     carrierDecisionReason: backend.carrierDecisionReason || undefined,
-    documents: (backend.documents || []).map((doc: any) => ({
+    documents: (backend.documents || []).map((doc) => ({
       id: doc.id,
       type: doc.type,
       filename: doc.filename,

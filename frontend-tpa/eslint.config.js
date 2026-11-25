@@ -19,9 +19,5 @@ export default defineConfig([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
-    rules: {
-      // Backend DTOs are mapped dynamically; tracked as a typing follow-up.
-      '@typescript-eslint/no-explicit-any': 'warn',
-    },
   },
 ])
