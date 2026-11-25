@@ -1,0 +1,49 @@
+
+# Java / Maven
+target/
+*.class
+.idea/
+*.iml
+.mvn/wrapper/maven-wrapper.properties
+.settings/
+.classpath
+.project
+
+# Node / Frontend
+node_modules/
+dist/
+coverage/
+.npm/
+.cache/
+.next/
+build/
+
+# Python / Uvicorn
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# Environment Variables & Logs
+.env
+*.log
+logs/
+storage/
+
+# Local upload storage (dev artifacts)
+Backend/upload-dir/
+Backend/upload-dir/**
+
+# System
+.DS_Store
+Thumbs.db
+
+# Backend debug artifacts (should never be committed)
+Backend/build_output.txt
+Backend/debug_log.txt
+Backend/error_log.txt
+Backend/effective-pom

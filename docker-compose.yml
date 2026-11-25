@@ -1,0 +1,71 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: tpa-mysql
+    mem_limit: 1g
+    cpus: 1.0
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:?set DB_PASSWORD in .env}
+      MYSQL_DATABASE: tpa_claims
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -p$$MYSQL_ROOT_PASSWORD || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  python-service:
+    build:
+      context: ./Python-Service
+    container_name: tpa-python-service
+    mem_limit: 2g
+    cpus: 1.5
+    environment:
+      HF_API_KEY: ${HF_API_KEY:-}
+      HF_MODEL: ${HF_MODEL:-HuggingFaceH4/zephyr-7b-beta}
+    volumes:
+      - backend_storage:/data/storage:ro
+    ports:
+      - "5000:5000"
+
+  backend:
+    build:
+      context: ./Backend
+    container_name: tpa-backend
+    mem_limit: 1500m
+    cpus: 1.5
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/tpa_claims?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      DB_USER: root
+      DB_PASSWORD: ${DB_PASSWORD}
+      PYTHON_SERVICE_URL: http://python-service:5000
+      JWT_SECRET: ${JWT_SECRET:?set JWT_SECRET in .env}
+      UPLOAD_DIR: /data/storage
+    volumes:
+      - backend_storage:/data/storage
+    ports:
+      - "8080:8080"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      python-service:
+        condition: service_started
+
+  # Unified portal: one frontend for both TPA + Carrier roles.
+  frontend:
+    build:
+      context: ./frontend-tpa
+    container_name: tpa-frontend
+    mem_limit: 512m
+    cpus: 0.5
+    ports:
+      - "5173:5173"
+    depends_on:
+      backend:
+        condition: service_started
+
+volumes:
+  mysql_data:
+  backend_storage:

@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pdfplumber
+pytesseract
+Pillow
+requests
+pydantic
+python-dotenv
+python-multipart
+huggingface_hub
