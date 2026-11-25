@@ -3,7 +3,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CancelIcon from '@mui/icons-material/Cancel';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import PendingActionsIcon from '@mui/icons-material/PendingActions';
-import { memo } from 'react';
+import { memo, type ElementType } from 'react';
 
 import type { Claim } from '../services/api';
 
@@ -19,7 +19,7 @@ interface KPISummaryProps {
 }
 
 const KPICard = memo(
-  ({ icon: Icon, label, value, tone, progress }: { icon: any; label: string; value: string; tone: string; progress: number }) => (
+  ({ icon: Icon, label, value, tone, progress }: { icon: ElementType; label: string; value: string; tone: string; progress: number }) => (
     <Card
       sx={{
         height: '100%',

@@ -1,4 +1,4 @@
-import { FormControl, InputLabel, Select, MenuItem, Box } from '@mui/material';
+import { FormControl, InputLabel, Select, MenuItem, Box, type SelectChangeEvent } from '@mui/material';
 
 interface StatusFilterProps {
   value: string;
@@ -7,7 +7,7 @@ interface StatusFilterProps {
 }
 
 export const StatusFilter = ({ value, onChange, disabled = false }: StatusFilterProps) => {
-  const handleChange = (event: any) => {
+  const handleChange = (event: SelectChangeEvent<string>) => {
     onChange(event.target.value);
   };
 

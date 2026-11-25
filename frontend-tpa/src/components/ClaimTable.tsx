@@ -71,16 +71,14 @@ export const ClaimTable = memo(
     const sortedClaims = useMemo(() => {
       const sorted = [...claims];
       sorted.sort((a, b) => {
-        let aVal: any = a[sortField];
-        let bVal: any = b[sortField];
-
-        if (sortField === 'createdDate') {
-          aVal = new Date(aVal).getTime();
-          bVal = new Date(bVal).getTime();
-        } else if (sortField === 'status') {
-          aVal = String(aVal || '').toLowerCase();
-          bVal = String(bVal || '').toLowerCase();
-        }
+        const sortValue = (claim: Claim): string | number => {
+          const raw = claim[sortField];
+          if (sortField === 'createdDate') return new Date(String(raw)).getTime();
+          if (typeof raw === 'number') return raw;
+          return sortField === 'status' ? String(raw ?? '').toLowerCase() : String(raw ?? '');
+        };
+        const aVal = sortValue(a);
+        const bVal = sortValue(b);
 
         if (aVal < bVal) return sortOrder === 'asc' ? -1 : 1;
         if (aVal > bVal) return sortOrder === 'asc' ? 1 : -1;

@@ -143,7 +143,7 @@ The Python suite covers LLM JSON cleanup, date normalisation, the regex fallback
 ## Roadmap
 
 - [ ] Unit tests for the Java rule engine (storage layer covered)
-- [ ] Replace remaining `any` types in the frontend API layer with typed DTOs
+- [x] Replace `any` types in the frontend API layer with typed DTOs
 - [ ] Async extraction queue for large batches
 - [ ] Carrier callback webhooks with signature verification
 
