@@ -1,0 +1,222 @@
+[
+  {
+    "claimId": "CLM-2024-001",
+    "policyNumber": "POL-100001",
+    "customerName": "John Smith",
+    "carrierName": "United Health Insurance",
+    "policyName": "Comprehensive Health Plus",
+    "createdDate": "2024-01-15",
+    "processedDate": "2024-01-20",
+    "status": "Approved",
+    "reason": "Claim verified and approved"
+  },
+  {
+    "claimId": "CLM-2024-002",
+    "policyNumber": "POL-100002",
+    "customerName": "Sarah Johnson",
+    "carrierName": "Blue Cross Blue Shield",
+    "policyName": "Premium Coverage",
+    "createdDate": "2024-01-16",
+    "processedDate": "2024-01-22",
+    "status": "Needs Manual Review",
+    "reason": "Missing documentation required"
+  },
+  {
+    "claimId": "CLM-2024-003",
+    "policyNumber": "POL-100003",
+    "customerName": "Michael Brown",
+    "carrierName": "Aetna",
+    "policyName": "Standard Coverage",
+    "createdDate": "2024-01-17",
+    "processedDate": "2024-01-19",
+    "status": "Approved",
+    "reason": "All documents verified"
+  },
+  {
+    "claimId": "CLM-2024-004",
+    "policyNumber": "POL-100004",
+    "customerName": "Emily Davis",
+    "carrierName": "MetLife",
+    "policyName": "Life Protection Plan",
+    "createdDate": "2024-01-18",
+    "processedDate": "2024-01-25",
+    "status": "Rejected",
+    "reason": "Claim exceeds policy coverage limits"
+  },
+  {
+    "claimId": "CLM-2024-005",
+    "policyNumber": "POL-100005",
+    "customerName": "Robert Wilson",
+    "carrierName": "Cigna",
+    "policyName": "Family Health Plus",
+    "createdDate": "2024-01-19",
+    "processedDate": "2024-01-26",
+    "status": "Approved",
+    "reason": "Documentation complete and verified"
+  },
+  {
+    "claimId": "CLM-2024-006",
+    "policyNumber": "POL-100006",
+    "customerName": "Lisa Martinez",
+    "carrierName": "Humana",
+    "policyName": "Essential Health",
+    "createdDate": "2024-01-20",
+    "processedDate": "2024-01-28",
+    "status": "Needs Manual Review",
+    "reason": "Requires medical review by specialist"
+  },
+  {
+    "claimId": "CLM-2024-007",
+    "policyNumber": "POL-100007",
+    "customerName": "David Garcia",
+    "carrierName": "United Health Insurance",
+    "policyName": "Wellness Coverage",
+    "createdDate": "2024-01-21",
+    "processedDate": "2024-01-23",
+    "status": "Approved",
+    "reason": "All requirements satisfied"
+  },
+  {
+    "claimId": "CLM-2024-008",
+    "policyNumber": "POL-100008",
+    "customerName": "Jennifer Lopez",
+    "carrierName": "Blue Cross Blue Shield",
+    "policyName": "Elite Plan",
+    "createdDate": "2024-01-22",
+    "processedDate": "2024-01-29",
+    "status": "Rejected",
+    "reason": "Pre-existing condition exclusion applies"
+  },
+  {
+    "claimId": "CLM-2024-009",
+    "policyNumber": "POL-100009",
+    "customerName": "Christopher Anderson",
+    "carrierName": "Aetna",
+    "policyName": "Basic Protection",
+    "createdDate": "2024-01-23",
+    "processedDate": "2024-01-27",
+    "status": "Approved",
+    "reason": "Claim processed successfully"
+  },
+  {
+    "claimId": "CLM-2024-010",
+    "policyNumber": "POL-100010",
+    "customerName": "Michelle Taylor",
+    "carrierName": "MetLife",
+    "policyName": "Comprehensive Plus",
+    "createdDate": "2024-01-24",
+    "processedDate": "2024-02-01",
+    "status": "Needs Manual Review",
+    "reason": "Additional information needed from provider"
+  },
+  {
+    "claimId": "CLM-2024-011",
+    "policyNumber": "POL-100011",
+    "customerName": "Kevin Thomas",
+    "carrierName": "Cigna",
+    "policyName": "Standard Plus",
+    "createdDate": "2024-01-25",
+    "processedDate": "2024-01-30",
+    "status": "Approved",
+    "reason": "Fully documented and approved"
+  },
+  {
+    "claimId": "CLM-2024-012",
+    "policyNumber": "POL-100012",
+    "customerName": "Amanda White",
+    "carrierName": "Humana",
+    "policyName": "Family Wellness",
+    "createdDate": "2024-01-26",
+    "processedDate": "2024-02-02",
+    "status": "Rejected",
+    "reason": "Service not covered under policy"
+  },
+  {
+    "claimId": "CLM-2024-013",
+    "policyNumber": "POL-100013",
+    "customerName": "Daniel Harris",
+    "carrierName": "United Health Insurance",
+    "policyName": "Premium Health",
+    "createdDate": "2024-01-27",
+    "processedDate": "2024-02-03",
+    "status": "Needs Manual Review",
+    "reason": "Awaiting authorization from benefits team"
+  },
+  {
+    "claimId": "CLM-2024-014",
+    "policyNumber": "POL-100014",
+    "customerName": "Jessica Martin",
+    "carrierName": "Blue Cross Blue Shield",
+    "policyName": "Optimal Coverage",
+    "createdDate": "2024-01-28",
+    "processedDate": "2024-02-04",
+    "status": "Approved",
+    "reason": "Claim validated and payment approved"
+  },
+  {
+    "claimId": "CLM-2024-015",
+    "policyNumber": "POL-100015",
+    "customerName": "Thomas Clark",
+    "carrierName": "Aetna",
+    "policyName": "Advanced Health Plan",
+    "createdDate": "2024-01-29",
+    "processedDate": "2024-02-05",
+    "status": "Approved",
+    "reason": "Benefits confirmed and processed"
+  },
+  {
+    "claimId": "CLM-2024-016",
+    "policyNumber": "POL-100016",
+    "customerName": "Ashley Rodriguez",
+    "carrierName": "MetLife",
+    "policyName": "Life Secure",
+    "createdDate": "2024-01-30",
+    "processedDate": "2024-02-06",
+    "status": "Needs Manual Review",
+    "reason": "Claim exceeds threshold - requires review"
+  },
+  {
+    "claimId": "CLM-2024-017",
+    "policyNumber": "POL-100017",
+    "customerName": "Ryan Lewis",
+    "carrierName": "Cigna",
+    "policyName": "Full Coverage Plus",
+    "createdDate": "2024-01-31",
+    "processedDate": "2024-02-07",
+    "status": "Rejected",
+    "reason": "Documentation requirements not met"
+  },
+  {
+    "claimId": "CLM-2024-018",
+    "policyNumber": "POL-100018",
+    "customerName": "Megan Lee",
+    "carrierName": "Humana",
+    "policyName": "Wellness Plus",
+    "createdDate": "2024-02-01",
+    "processedDate": "2024-02-08",
+    "status": "Approved",
+    "reason": "All criteria met - payment processed"
+  },
+  {
+    "claimId": "CLM-2024-019",
+    "policyNumber": "POL-100019",
+    "customerName": "Brandon Walker",
+    "carrierName": "United Health Insurance",
+    "policyName": "Elite Coverage",
+    "createdDate": "2024-02-02",
+    "processedDate": "2024-02-09",
+    "status": "Approved",
+    "reason": "Claim approved with full benefits"
+  },
+  {
+    "claimId": "CLM-2024-020",
+    "policyNumber": "POL-100020",
+    "customerName": "Stephanie Hall",
+    "carrierName": "Blue Cross Blue Shield",
+    "policyName": "Comprehensive Health",
+    "createdDate": "2024-02-03",
+    "processedDate": "2024-02-10",
+    "status": "Needs Manual Review",
+    "reason": "Pending peer-to-peer review"
+  }
+]
