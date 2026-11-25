@@ -32,7 +32,8 @@ env/
 .env
 *.log
 logs/
-storage/
+/storage/
+Backend/storage/
 
 # Local upload storage (dev artifacts)
 Backend/upload-dir/
