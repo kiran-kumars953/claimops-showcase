@@ -8,10 +8,9 @@ OCR + LLM extraction → human review → a 10-rule policy engine → carrier ha
 
 [![CI](https://github.com/kiran-kumars953/claimops-showcase/actions/workflows/ci.yml/badge.svg)](https://github.com/kiran-kumars953/claimops-showcase/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-![Java](https://img.shields.io/badge/Java_17-Spring_Boot_3.2-6DB33F?logo=springboot&logoColor=white)
-![React](https://img.shields.io/badge/React-TypeScript-61DAFB?logo=react&logoColor=black)
-![Python](https://img.shields.io/badge/Python-FastAPI-009688?logo=fastapi&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
+
+<table align="center"><tr><td align="center" width="72"><img src="https://go-skill-icons.vercel.app/api/icons?i=react&theme=dark" width="32" height="32" alt="React"/><br/><sub>React</sub></td><td align="center" width="72"><img src="https://go-skill-icons.vercel.app/api/icons?i=ts&theme=dark" width="32" height="32" alt="TypeScript"/><br/><sub>TypeScript</sub></td><td align="center" width="72"><img src="https://go-skill-icons.vercel.app/api/icons?i=spring&theme=dark" width="32" height="32" alt="Spring Boot"/><br/><sub>Spring Boot</sub></td><td align="center" width="72"><img src="https://go-skill-icons.vercel.app/api/icons?i=fastapi&theme=dark" width="32" height="32" alt="FastAPI"/><br/><sub>FastAPI</sub></td><td align="center" width="72"><img src="https://raw.githubusercontent.com/kiran-kumars953/kiran-kumars953/main/assets/ocr.svg" width="32" height="32" alt="Tesseract"/><br/><sub>Tesseract</sub></td><td align="center" width="72"><img src="https://go-skill-icons.vercel.app/api/icons?i=huggingface&theme=dark" width="32" height="32" alt="Hugging Face"/><br/><sub>Hugging Face</sub></td><td align="center" width="72"><img src="https://go-skill-icons.vercel.app/api/icons?i=docker&theme=dark" width="32" height="32" alt="Docker"/><br/><sub>Docker</sub></td></tr></table>
+
 
 </div>
 
